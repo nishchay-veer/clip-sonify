@@ -6,7 +6,7 @@ def upload(f, fs, channel, access):
         fid = fs.put(f)
     except Exception as err:
         print(err)
-        return "internal server error, fs level", 500
+        return "internal server error, file storage level", 500
 
     message = {
         "video_fid": str(fid),
